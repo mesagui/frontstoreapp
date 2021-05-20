@@ -1,9 +1,6 @@
-export class Employee {
-  id: number;
-  lastname: String;
-  firstname: String;
-  job_title: String;
-  phone: String;
-  dni: String;
-  address: String;
+import { Persona } from './Persona';
+
+export interface Employee extends Persona {
+  job: String;
+  salary: String;
 }

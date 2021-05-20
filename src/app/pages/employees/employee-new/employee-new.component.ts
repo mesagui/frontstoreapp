@@ -20,7 +20,7 @@ export class EmployeeNewComponent implements OnInit {
     this.employeeForm = this.formBuilder.group({
       lastname: [''],
       firstname: [''],
-      job_title: [''],
+      job: [''],
       phone: [''],
       dni: [''],
       address: [''],
