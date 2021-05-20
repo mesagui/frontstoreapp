@@ -32,8 +32,8 @@ export class EmployeeNewComponent implements OnInit {
   onSubmit(): any {
     this.employeeService.AddBook(this.employeeForm.value).subscribe(
       () => {
-        console.log('Data added successfully!');
-        this.ngZone.run(() => this.router.navigateByUrl('/books-list'));
+        console.log('Data agregada!');
+        this.ngZone.run(() => this.router.navigateByUrl('/employee-list'));
       },
       (err) => {
         console.log(err);

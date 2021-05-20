@@ -15,11 +15,12 @@ import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { EmployeeListComponent } from './pages/employees/employee-list/employee-list.component';
+import { EmployeeNewComponent } from './pages/employees/employee-new/employee-new.component';
 
 registerLocaleData(es);
 
 @NgModule({
-  declarations: [AppComponent, EmployeeListComponent],
+  declarations: [AppComponent, EmployeeListComponent, EmployeeNewComponent],
   imports: [
     BrowserModule,
     SharedModule,
