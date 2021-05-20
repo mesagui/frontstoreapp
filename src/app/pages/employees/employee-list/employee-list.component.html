@@ -1,7 +1,7 @@
 <h4 class="text-secondary">PERSONAL</h4>
 
 <div class="row">
-  <div *ngFor="let employee of Employees">
+  <div *ngFor="let employee of Employees; let i = index">
     <div class="col-mb-3" style="max-width: 540px">
       <div class="row no-gutters">
         <div class="col-md-4">
@@ -13,6 +13,7 @@
         </div>
         <div class="col-md-8">
           <div class="card-body">
+            <span>{{ employee.id }}</span>
             <h5 class="card-title">
               {{ employee.lastname }} {{ employee.firstname }}
             </h5>
@@ -37,7 +38,11 @@
         <button type="button" class="btn btn-secondary btn-sm mr-2">
           <i class="fas fa-user-edit"></i> Editar
         </button>
-        <button type="button" class="btn btn-danger btn-sm mr-2">
+        <button
+          type="button"
+          class="btn btn-danger btn-sm mr-2"
+          (click)="delete(employee.id, i)"
+        >
           <i class="fas fa-user-times"></i> Eliminar
         </button>
       </div>
