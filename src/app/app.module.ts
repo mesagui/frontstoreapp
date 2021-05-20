@@ -19,12 +19,14 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { EmployeeListComponent } from './pages/employees/employee-list/employee-list.component';
 import { DataTablesModule } from "angular-datatables";
+import { EmployeeNewComponent } from './pages/employees/employee-new/employee-new.component';
+import { EmployeeDetailComponent } from './pages/employees/employee-detail/employee-detail.component';
 
 registerLocaleData(es);
 
 @NgModule({
-  declarations: [AppComponent, EmployeeListComponent, ProductListComponent,
-  ProductNewComponent,ProductDetailComponent],
+  declarations: [AppComponent, EmployeeListComponent, EmployeeNewComponent, EmployeeDetailComponent, ProductListComponent,
+  ProductNewComponent ,ProductDetailComponent, ProductNewComponent, ProductListComponent],
   imports: [
     BrowserModule,
     SharedModule,

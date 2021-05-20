@@ -12,9 +12,18 @@ export class EmployeeListComponent implements OnInit {
   constructor(private employeeService: EmployeeService) {}
 
   ngOnInit(): void {
-    this.employeeService.GetBooks().subscribe((res) => {
+    this.employeeService.GetEmployee().subscribe((res) => {
       console.log(res);
       this.Employees = res;
     });
+  }
+
+  delete(id: any, i: any) {
+    console.log(id);
+    if (window.confirm('Seguro de eliminar el registro!!!!!')) {
+      this.employeeService.DeleteEmployee(id).subscribe((res) => {
+        this.Employees.splice(i, 1);
+      });
+    }
   }
 }
