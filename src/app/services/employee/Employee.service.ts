@@ -5,7 +5,7 @@ import {
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
-import { Employee } from './Employee';
+import { Employee } from '../../models/Employee';
 
 @Injectable({
   providedIn: 'root',

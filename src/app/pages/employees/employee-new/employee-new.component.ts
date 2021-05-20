@@ -1,7 +1,7 @@
 import { Component, NgZone, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { EmployeeService } from 'src/app/services/Employee.service';
+import { EmployeeService } from 'src/app/services/employee/Employee.service';
 
 @Component({
   selector: 'app-employee-new',

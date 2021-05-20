@@ -1,3 +1,6 @@
+import { ProductDetailComponent } from './pages/products/product-detail/product-detail.component';
+import { ProductNewComponent } from './pages/products/product-new/product-new.component';
+import { ProductListComponent } from './pages/products/product-list/product-list.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -15,11 +18,13 @@ import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { EmployeeListComponent } from './pages/employees/employee-list/employee-list.component';
+import { DataTablesModule } from "angular-datatables";
 
 registerLocaleData(es);
 
 @NgModule({
-  declarations: [AppComponent, EmployeeListComponent],
+  declarations: [AppComponent, EmployeeListComponent, ProductListComponent,
+  ProductNewComponent,ProductDetailComponent],
   imports: [
     BrowserModule,
     SharedModule,
@@ -31,6 +36,7 @@ registerLocaleData(es);
     NzLayoutModule,
     NzMenuModule,
     ReactiveFormsModule,
+    DataTablesModule
   ],
   providers: [{ provide: NZ_I18N, useValue: es_ES }],
   bootstrap: [AppComponent],
