@@ -19,6 +19,9 @@ export class ProductNewComponent implements OnInit {
     private ngZone: NgZone
   ) { 
     this.productForm = this.formBuilder.group({
+      quantity_per_unit: [''],
+      id_suplier: [''],
+      id_category: [''],
       title: [''],
       stock: [''],
       unite_price: [''],
@@ -29,7 +32,7 @@ export class ProductNewComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(): any {
+  Add(): any {
     this.productService.AddProduct(this.productForm.value).subscribe(
       () => {
         console.log('La data ta aqui');

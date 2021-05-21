@@ -37,4 +37,13 @@ export class ProductListComponent implements OnDestroy, OnInit {
     this.dtTrigger.unsubscribe();
   }
 
+  Delete(id:any, i: any){
+    console.log(id);
+    if(window.confirm('Seguro quiere eliminar?')){
+      this.productService.DeleteProduct(id).subscribe((res) => {
+        this.data.splice(i, 1);
+      })
+    }
+  }
+
 }

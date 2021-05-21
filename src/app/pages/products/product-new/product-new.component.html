@@ -1,7 +1,32 @@
 <div class="row justify-content-center mt-5">
     <div class="col-md-10">
       <div class="container">
-        <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="productForm" (ngSubmit)="Add()">
+
+          <div class="row">
+            <div class="col">
+              <label>Proveedor:</label>
+              <input
+                class="form-control"
+                type="text"
+                formControlName="id_suplier"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label>Categoria:</label>
+              <input
+                class="form-control"
+                type="text"
+                formControlName="id_category"
+                required
+              />
+            </div>
+          </div>
+
             <div class="row">
               <div class="col">
                 <label>Nombre:</label>
@@ -37,6 +62,18 @@
                     />
                 </div>
             </div>
+
+            <div class="row">
+              <div class="col">
+                  <label>Cantidad por unidad</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    formControlName="quantity_per_unit"
+                    required
+                  />
+              </div>
+          </div>
       
             <div class="row">
               <div class="col">

@@ -7,14 +7,22 @@
             <th>Stock</th>
             <th>Precio Unitario</th>
             <th>Descontinuado</th>
+            <th></th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
             <tr *ngFor="let p of data">
-                <td>{{p.title}}</td>
+                <td>{{p.tittle}}</td>
                 <td>{{p.stock}}</td>
                 <td>{{p.unite_price}}</td>
                 <td>{{p.discontinued}}</td>
+                <td class="text-center">
+                    <button type="button" class="btn btn-secondary btn-sm mr-2">Editar</button>
+                </td>
+                <td class="text-center">
+                    <button type="button" class="btn btn-danger btn-sm mr-2" (click)="Delete(p.id, i)">Eliminar</button>
+                </td>
             </tr>
         </tbody>
     </table>

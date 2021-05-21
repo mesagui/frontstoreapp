@@ -18,15 +18,20 @@ export class ProductService {
 
   constructor(private httpClient: HttpClient) { }
 
+  //List
+  ListProduct(){
+    return this.httpClient.get(`${this.REST_API}/products`);
+  }
+
   //Add
   AddProduct(data: Product):Observable<any>{
     let API_URL = `${this.REST_API}/products/`;
     return this.httpClient.post(API_URL, data);
   }
 
-  //List
-  ListProduct(){
-    return this.httpClient.get(`${this.REST_API}/products`);
+  DeleteProduct(id: any): Observable<any>{
+    let API_URL = `${this.REST_API}/products/${id}`;
+    return this.httpClient.delete(API_URL, {headers: this.httpHeaders});
   }
 
   handleError(error: HttpErrorResponse) {

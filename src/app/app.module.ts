@@ -26,7 +26,7 @@ registerLocaleData(es);
 
 @NgModule({
   declarations: [AppComponent, EmployeeListComponent, EmployeeNewComponent, EmployeeDetailComponent, ProductListComponent,
-  ProductNewComponent ,ProductDetailComponent, ProductNewComponent, ProductListComponent],
+  ProductNewComponent ,ProductDetailComponent],
   imports: [
     BrowserModule,
     SharedModule,
